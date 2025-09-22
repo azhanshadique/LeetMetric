@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>LeetMetric - Dashboard</title>
+  <meta name="description" content="Production-ready responsive dashboard UI with accessible colors, cards, progress, and modal components.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <div class="shell" role="region" aria-label="Dashboard">
+
+      <header class="top">
+        <div class="brand">
+          <div class="logo" aria-hidden="true">LM</div>
+          <div>
+            <h1>LeetMetric - Dashboard</h1>
+            <p>Search • Anyone • Progress</p>
+          </div>
+        </div>
+
+        <div class="controls">
+          <div class="search" role="search" aria-label="Search">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 21l-4.35-4.35" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="11" cy="11" r="6" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></circle></svg>
+            <input id="query" type="search" placeholder="Search username" aria-label="Search input">
+          </div>
+
+          <button class="btn" id="search-btn">Search</button>
+          <button class="btn secondary" id="toggle-theme" aria-pressed="false">Toggle theme</button>
+        </div>
+      </header>
+
+      <main class="main" id="main-content">
+        <section class="panel" aria-labelledby="overview-heading">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:1rem;">
+            <div>
+              <h2 id="overview-heading" style="margin:0;font-size:1.15rem">Overview</h2>
+              <p style="margin:0;color:var(--muted);font-size:0.95rem">Key metrics and recent activity.</p>
+            </div>
+
+            <div style="display:flex;align-items:center;gap:1rem">
+              <div class="circle" id="easy-progress" style="--deg: 0deg;" aria-hidden="true">
+                <div class="inner">
+                  <strong id="easy-value">0%</strong>
+                  <small>Easy</small>
+                </div>
+              </div>
+              <div class="circle" id="medium-progress" style="--deg: 0deg;" aria-hidden="true">
+                <div class="inner">
+                  <strong id="medium-value">0%</strong>
+                  <small>Medium</small>
+                </div>
+              </div>
+              <div class="circle" id="hard-progress" style="--deg: 0deg;" aria-hidden="true">
+                <div class="inner">
+                  <strong id="hard-value">0%</strong>
+                  <small>Hard</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="kpi-row" aria-hidden="false">
+            <div class="card" role="region" aria-label="Total questions">
+              <div class="label">Total Questions</div>
+              <div class="value" id="total-questions">0</div>
+            </div>
+
+            <div class="card" role="region" aria-label="Total solved">
+              <div class="label">Total Solved</div>
+              <div class="value" id="total-solved">0</div>
+            </div>
+
+            <div class="card" role="region" aria-label="Ranking">
+              <div class="label">Ranking</div>
+              <div class="value" id="ranking">—</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel" style="margin-top:1rem" aria-labelledby="activity-heading">
+          <h3 id="activity-heading" style="margin:0 0 0.75rem 0">Recent activity</h3>
+          <p style="margin:0;color:var(--muted);font-size:0.95rem">This area is intentionally minimal — wire up your feed or activity list here.</p>
+        </section>
+      </main>
+
+      <aside class="sidebar" aria-label="Sidebar">
+        <div class="panel">
+          <h4 style="margin:0 0 0.5rem 0">Stats</h4>
+          <div class="stats-cards" id="stats-grid" role="list">
+            <!-- cards injected by JS -->
+          </div>
+        </div>
+
+        <!-- <div class="panel">
+          <h4 style="margin:0 0 0.5rem 0">Actions</h4>
+          <div style="display:flex;flex-direction:column;gap:0.5rem">
+            <button class="btn" id="export">Export CSV</button>
+            <button class="btn secondary" id="settings">Settings</button>
+          </div>
+        </div> -->
+      </aside>
+
+      <footer>
+        <small>© 2025 — LeetMetric · All Rights Reserved</small>
+        <small style="color:var(--muted)">Accessible colors · Responsive · Ready</small>
+      </footer>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
