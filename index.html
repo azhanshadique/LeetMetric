@@ -12,14 +12,41 @@
         <!-- Heading -->
         <h1>LeetMetric</h1>
 
-        <!-- User -->
+        <!-- User Input -->
         <div class="user-container">
-
+            <div class="user-input-container">
+                <input type="text" placeholder="Enter your username here" id="user-input">
+                <button id="search-btn">Search</button>
+            </div>
         </div>
 
         <!-- Stats -->
-        <div class="stats-container">
+        <div class="stats-container hidden">
 
+            <div class="progress">
+                <div class="progress-item">
+                    <div class="easy-progress circle">
+                        <span id="easy-label"></span>
+                        <p>Easy</p>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <div class="medium-progress circle">
+                        <span id="medium-label"></span>
+                        <p>Medium</p>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <div class="hard-progress circle">
+                        <span id="hard-label"></span>
+                        <p>Hard</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-cards">
+                <!-- Cards populated dynamically via JS -->
+            </div>
         </div>
 
     </div>
